@@ -1,0 +1,84 @@
+<!-- VIEW 15: ADMIN DASHBOARD -->
+<section id="view-admin-dashboard" class="view-section d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <div>
+            <h3 class="fw-bold mb-1"><i class="bi bi-speedometer2 me-2 text-danger"></i>Hospital Administration Dashboard</h3>
+            <p class="text-muted small mb-0">High-level hospital metrics, appointment counts, and revenue summary (Administrator Access Only)</p>
+        </div>
+        <div class="btn-group">
+            <a href="#patient-management" class="btn btn-outline-primary btn-sm">Patients</a>
+            <a href="#doctor-management" class="btn btn-outline-primary btn-sm">Doctors</a>
+            <a href="#staff-management" class="btn btn-outline-warning btn-sm">Staff Directory</a>
+            <a href="#appointment-management" class="btn btn-outline-primary btn-sm">Appointments</a>
+            <a href="#payment-management" class="btn btn-outline-success btn-sm">Revenue</a>
+        </div>
+    </div>
+
+    <!-- Dashboard Analytics Grid -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card primary">
+                <div class="text-muted small fw-bold">PATIENTS</div>
+                <h3 class="fw-bold mb-0 text-primary" id="adm-stat-patients">0</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card success">
+                <div class="text-muted small fw-bold">DOCTORS</div>
+                <h3 class="fw-bold mb-0 text-success" id="adm-stat-doctors">0</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card warning">
+                <div class="text-muted small fw-bold">STAFF</div>
+                <h3 class="fw-bold mb-0 text-warning" id="adm-stat-staff">0</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card primary">
+                <div class="text-muted small fw-bold">TOTAL APTS</div>
+                <h3 class="fw-bold mb-0 text-primary" id="adm-stat-appointments">0</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card danger">
+                <div class="text-muted small fw-bold">PENDING APTS</div>
+                <h3 class="fw-bold mb-0 text-danger" id="adm-stat-pending">0</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-xl-2">
+            <div class="card p-3 stat-card success">
+                <div class="text-muted small fw-bold">REVENUE</div>
+                <h3 class="fw-bold mb-0 text-success" id="adm-stat-revenue">LKR 0</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Quick Links Section -->
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card p-4 h-100 shadow-sm border-0 text-center">
+                <i class="bi bi-people fs-1 text-primary mb-2"></i>
+                <h5>Patient Management</h5>
+                <p class="text-muted small">View, search, edit, and delete patient accounts.</p>
+                <a href="#patient-management" class="btn btn-outline-primary btn-sm mt-auto">Manage Patients</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-4 h-100 shadow-sm border-0 text-center">
+                <i class="bi bi-heart-pulse fs-1 text-success mb-2"></i>
+                <h5>Doctor Management</h5>
+                <p class="text-muted small">Add doctors, adjust specialization, fees, and availability.</p>
+                <a href="#doctor-management" class="btn btn-outline-success btn-sm mt-auto">Manage Doctors</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-4 h-100 shadow-sm border-0 text-center">
+                <i class="bi bi-person-workspace fs-1 text-warning mb-2"></i>
+                <h5>Medical Staff Management</h5>
+                <p class="text-muted small">Manage hospital workforce, view salaries, and record staff duty.</p>
+                <a href="#staff-management" class="btn btn-outline-warning btn-sm mt-auto">Manage Staff</a>
+            </div>
+        </div>
+    </div>
+</section>

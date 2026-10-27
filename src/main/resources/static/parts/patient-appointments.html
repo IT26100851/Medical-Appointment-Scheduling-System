@@ -1,0 +1,30 @@
+<!-- VIEW 9 & 10: APPOINTMENT LIST & UPDATE -->
+<section id="view-appointment-list" class="view-section d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <div>
+            <h3 class="fw-bold mb-1"><i class="bi bi-calendar-check-fill me-2 text-primary"></i>My Appointments</h3>
+        </div>
+        <a href="#appointment-booking" class="btn btn-teal btn-sm"><i class="bi bi-calendar-plus me-1"></i>Book New</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Doctor ID</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-appointments-tbody">
+                    <tr><td colspan="7" class="text-center py-4">Loading appointments...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

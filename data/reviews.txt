@@ -1,0 +1,7 @@
+# reviewId|patientId|doctorId|rating|comment|date|reviewType|extraData
+REV-101|PAT-101|DOC-101|5|Dr. Samantha was extremely thorough and kind. She answered all my questions regarding heart health.|2026-10-01|VerifiedReview|Apt:APT-101;Treatment:Cardiac Consultation
+REV-102|PAT-102|DOC-102|4|Prompt diagnosis and very friendly bedside manner. Waiting time was minimal.|2026-10-02|PatientReview|Regular
+REV-103|PAT-103|DOC-103|5|Superb orthopedic surgeon. Knee mobility recovered much faster than anticipated.|2026-10-03|VerifiedReview|Apt:APT-103;Treatment:Joint Surgery
+REV-104|PAT-104|DOC-105|5|Dr. Niluka provided clear dietary advice and an effective skin ointment. Very pleased!|2026-10-04|PatientReview|Regular
+REV-105|PAT-101|DOC-106|5|Very kind, understanding, and professional. I felt comfortable sharing my concerns and received helpful guidance throughout. Highly recommended!|2026-10-07|VerifiedReview|Apt:;Treatment:
+REV-106|PAT-101|DOC-102|3|dfghjkl;.,mnbvcxwertyui|2026-10-09|PatientReview|Regular

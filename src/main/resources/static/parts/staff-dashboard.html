@@ -1,0 +1,119 @@
+<!-- VIEW: DEDICATED STAFF DASHBOARD (NOT ADMIN DASHBOARD) -->
+<section id="view-staff-dashboard" class="view-section d-none">
+    <!-- Staff Header Banner -->
+    <div class="card bg-teal text-white p-4 shadow-sm border-0 mb-4 rounded-3" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+                <span class="badge bg-white text-teal px-3 py-1 rounded-pill fw-bold mb-2">Hospital Clinical Staff Console</span>
+                <h2 class="fw-bold mb-1">
+                    <i class="bi bi-hospital me-2"></i>Staff Operations: <span id="staff-dash-name">Nurse Mary Watson</span>
+                </h2>
+                <p class="text-white-50 mb-0 small">
+                    Department: <strong class="text-white" id="staff-dash-dept">Emergency & Clinical Care</strong> | 
+                    Staff ID: <strong class="text-white" id="staff-dash-id">STF-101</strong> | 
+                    Duty Status: <span class="badge bg-success text-white"><i class="bi bi-check-circle me-1"></i>Active On Duty</span>
+                </p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+                <a href="#appointment-booking" class="btn btn-light text-teal fw-semibold btn-sm">
+                    <i class="bi bi-calendar-plus me-1"></i>Book Walk-in Patient
+                </a>
+                <a href="#doctor-listing" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-person-badge me-1"></i>Doctor Directory
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Staff Operational Metrics (Clinical & Queue stats - No admin revenue/financials) -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card p-3 stat-card primary">
+                <div class="text-muted small fw-bold"><i class="bi bi-calendar-event me-1"></i>SCHEDULED APPOINTMENTS</div>
+                <h3 class="fw-bold mb-0 text-primary" id="staff-stat-scheduled">0</h3>
+                <small class="text-muted">Awaiting consultation</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 stat-card warning">
+                <div class="text-muted small fw-bold"><i class="bi bi-hourglass-split me-1"></i>IN-PROGRESS CONSULTATIONS</div>
+                <h3 class="fw-bold mb-0 text-warning" id="staff-stat-inprogress">0</h3>
+                <small class="text-muted">With doctors right now</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 stat-card success">
+                <div class="text-muted small fw-bold"><i class="bi bi-check2-circle me-1"></i>COMPLETED TODAY</div>
+                <h3 class="fw-bold mb-0 text-success" id="staff-stat-completed">0</h3>
+                <small class="text-muted">Successfully treated</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 stat-card info">
+                <div class="text-muted small fw-bold"><i class="bi bi-heart-pulse me-1"></i>AVAILABLE DOCTORS</div>
+                <h3 class="fw-bold mb-0 text-info" id="staff-stat-available-docs">0</h3>
+                <small class="text-muted">On duty & ready</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Operational Tables: Active Appointment Queue & Doctor Duty Roster -->
+    <div class="row g-4">
+        <!-- Live Patient Appointment Queue -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <div>
+                        <h5 class="fw-bold mb-0"><i class="bi bi-people-fill me-2 text-teal"></i>Patient Consultation Queue</h5>
+                        <small class="text-muted">Manage patient arrivals, consultation starts, and completion status</small>
+                    </div>
+                    <div class="input-group input-group-sm" style="width: 220px;">
+                        <input type="text" id="staff-queue-search" class="form-control" placeholder="Search patient/doctor..." oninput="filterStaffQueue(this.value)">
+                        <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Apt ID</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date & Time</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th class="text-end">Staff Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="staff-appointment-queue-tbody">
+                            <tr>
+                                <td colspan="7" class="text-center py-4 text-muted">
+                                    <div class="spinner-border spinner-border-sm text-teal me-2" role="status"></div>
+                                    Loading patient queue...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Duty & Availability Roster -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-white py-3">
+                    <h5 class="fw-bold mb-0"><i class="bi bi-person-badge-fill me-2 text-primary"></i>Doctor Duty Roster</h5>
+                    <small class="text-muted">Live doctor presence & on-call status</small>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush" id="staff-doctor-roster-list">
+                        <div class="p-3 text-center text-muted small">Loading doctor status...</div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light small text-muted">
+                    <i class="bi bi-info-circle me-1"></i>Staff members can toggle doctor availability when they go on break or leave.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

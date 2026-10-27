@@ -1,0 +1,11 @@
+APT-101|PAT-101|DOC-101|2026-10-15|09:30|Completed|Routine cardiac checkup and ECG review|Standard|None
+APT-102|PAT-102|DOC-102|2026-10-16|10:00|Scheduled|Seasonal flu and persistent fever consultation|Standard|None
+APT-103|PAT-103|DOC-103|2026-10-14|14:00|Completed|Knee joint arthroscopy follow-up consultation|Emergency|Severity:High Priority
+APT-104|PAT-104|DOC-105|2026-10-18|11:15|Scheduled|Skin rash and allergic reaction follow-up|FollowUp|PrevApt:APT-090
+APT-105|PAT-101|DOC-102|2026-10-10|15:30|Cancelled|Cancelled due to patient personal travel|Standard|None
+APT-106|PAT-101|DOC-101|2026-10-08|09:00|Cancelled|Fiver|Standard|None
+APT-107|PAT-101|DOC-106|2026-10-20|09:00|Cancelled|fiver|Standard|None
+APT-108|PAT-101|DOC-103|2026-10-10|09:00|Scheduled|dgipihugoygugg|Standard|None
+APT-109|PAT-101|DOC-101|2026-10-10|09:00|Completed|amarui|Standard|None
+APT-110|PAT-101|DOC-102|2026-10-10|15:00|Scheduled|amarui|Standard|None
+APT-111|PAT-104|DOC-101|2026-10-10|10:00|Scheduled|amarui|Standard|None

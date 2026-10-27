@@ -1,0 +1,6 @@
+PAT-101|john_doe|pass123|mahinda rajapaksa|john.doe@example.com|0771234567|45 Galle Road, Colombo 03|Regular|Points:20
+PAT-102|sarah_smith|pass123|Sarah Smith|sarah.smith@example.com|0719876543|12 Flower Road, Colombo 07|Regular|Points:150
+PAT-103|michael_clarke|pass123|Michael Clarke|michael.c@example.com|0785551234|88 Kandy Road, Kadawatha|VIP|Level:Platinum;Discount:0.2;Priority:true
+PAT-104|anoma_perera|pass123|Anoma Perera|anoma.p@example.com|0764433221|23 High Level Rd, Nugegoda|Regular|Points:45
+PAT-6374|senuri|123456|Dananjana fernando|dananjanaf9@gmail.com|0712345678|sri lanka|VIP|Level:Gold;Discount:0.15;Priority:true
+PAT-62389|Ruwan max|ruwan123|John Doe|smkdak@gmail.com|07123433232|45 Galle Road, Colombo 03|Regular|Points:10

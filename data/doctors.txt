@@ -1,0 +1,6 @@
+DOC-101|Dr. Samantha Perera|Cardiology|0712345678|Available|SpecialistDoctor|4000.00|BoardCertification:MD, FACC Consultant Cardiologist
+DOC-102|Dr. David Fernando|General Medicine|0778765432|Available|GeneralDoctor|2000.00|ClinicRoom:Room 102 - OPD Wing
+DOC-103|Dr. Aruni Jayawardena|Orthopedics|0753344556|Available|Surgeon|5500.00|OT:OT-2 Surgical Wing
+DOC-104|Dr. Kusal Mendis|Pediatrics|0721122334|Busy|SpecialistDoctor|3000.00|BoardCertification:MBBS, DCH Consultant Pediatrician
+DOC-105|Dr. Niluka Silva|Dermatology|0709988776|Available|GeneralDoctor|2500.00|ClinicRoom:Room 105 - Dermatology Clinic
+DOC-106|Dr. Stephen Yohan|Psychology|0771234567|Available|SpecialistDoctor|8500.00|BoardCertification:Board Certified Specialist

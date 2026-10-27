@@ -1,0 +1,8 @@
+
+                        <div class="card bg-light mt-4 p-3 border-0 small">
+                            <strong>Demo Credentials (For Viva):</strong>
+                            <div class="text-muted mt-1">• Patient: <code>john_doe</code> / <code>pass123</code> (VIP)</div>
+                            <div class="text-muted">• Patient: <code>sarah_smith</code> / <code>pass123</code> (Regular)</div>
+                            <div class="text-muted">• Admin: <code>admin</code> / <code>admin123</code></div>
+                            <div class="text-muted">• Staff: <code>staff</code> / <code>staff123</code></div>
+                        </div>

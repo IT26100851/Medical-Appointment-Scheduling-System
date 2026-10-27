@@ -1,0 +1,293 @@
+/* Medical Appointment Scheduling System - Custom Stylesheet */
+:root {
+  --primary-color: #0f4c81;     /* Classic Medical Deep Blue */
+  --primary-hover: #0a365c;
+  --secondary-color: #00a896;   /* Health Teal */
+  --secondary-hover: #028090;
+  --accent-color: #f43f5e;      /* Medical Coral/Red */
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: linear-gradient(135deg, #0f4c81 0%, #00a896 100%);
+  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.hero-banner {
+  background: linear-gradient(135deg, rgba(15, 76, 129, 0.95), rgba(0, 168, 150, 0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: white;
+  padding: 4.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--card-bg);
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+
+/* Stat Cards */
+.stat-card {
+  border-left: 4px solid var(--secondary-color);
+  background: #ffffff;
+}
+
+.stat-card.primary { border-left-color: var(--primary-color); }
+.stat-card.success { border-left-color: #10b981; }
+.stat-card.warning { border-left-color: #f59e0b; }
+.stat-card.danger { border-left-color: #ef4444; }
+.stat-card.info { border-left-color: #06b6d4; }
+
+.bg-teal {
+  background-color: #00a896 !important;
+}
+.text-teal {
+  color: #00a896 !important;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-teal {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+.btn-teal:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+  color: white;
+}
+
+/* Badges */
+.badge-vip {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 20px;
+}
+
+.badge-doctor {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.badge-verified {
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  border: 1px solid #a7f3d0;
+}
+
+/* Form Styles */
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 150, 0.2);
+}
+
+/* Table */
+.table {
+  vertical-align: middle;
+}
+.table th {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Toast Notification */
+#toast-container {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+}
+
+/* ==========================================
+   Footer Styling (High Contrast & Clean Typography)
+   ========================================== */
+footer {
+  margin-top: auto;
+  background: linear-gradient(180deg, #0f233a 0%, #091726 100%);
+  border-top: 3px solid #00a896;
+  color: #f1f5f9;
+  padding: 3rem 0 1.5rem 0;
+}
+
+footer h5, footer h6 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-desc {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Override Bootstrap text-muted inside footer for high legibility */
+footer .text-muted,
+footer p.text-muted,
+footer small.text-muted,
+footer div.text-muted,
+footer span.text-muted {
+  color: #e2e8f0 !important;
+}
+
+footer ul li {
+  color: #f8fafc;
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+}
+
+footer ul li i {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+/* Footer Link Colors */
+footer a {
+  color: #a5f3fc !important; /* Bright soft cyan */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Social Media Circular Buttons */
+footer .social-icon {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+}
+
+footer .social-icon:hover {
+  background-color: #00a896;
+  border-color: #00a896;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+/* Contact Info Items */
+footer .footer-contact-item {
+  color: #f8fafc;
+  font-size: 0.9rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  opacity: 1;
+}
+
+/* Sub-Footer Copyright Row */
+footer .sub-footer {
+  color: #cbd5e1 !important;
+  font-size: 0.85rem;
+}
+
+footer .sub-footer strong {
+  color: #ffffff;
+}
+
+/* Quick Role Switcher Bar */
+.role-switcher-banner {
+  background-color: #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+  padding: 0.35rem 1rem;
+}

@@ -1,0 +1,61 @@
+<!-- VIEW 5: PATIENT PROFILE -->
+<section id="view-patient-profile" class="view-section d-none">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4 shadow-sm border-0">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold mb-0"><i class="bi bi-person-lines-fill me-2 text-primary"></i>My Profile Details</h4>
+                    <span class="badge bg-primary">Patient State</span>
+                </div>
+                <form id="patientProfileForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Patient ID</label>
+                            <input type="text" id="prof-id" class="form-control" readonly disabled>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" id="prof-username" class="form-control" readonly disabled>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="prof-name" class="form-control" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="prof-email" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" id="prof-phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input type="text" id="prof-address" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Membership Type (OOP Class)</label>
+                            <select id="prof-type" class="form-select">
+                                <option value="Regular">RegularPatient</option>
+                                <option value="VIP">VIPPatient</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label">New Password (leave blank to keep)</label>
+                            <input type="password" id="prof-password" class="form-control" placeholder="••••••••">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-teal px-4 fw-semibold">
+                            <i class="bi bi-save me-1"></i>Save Profile Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

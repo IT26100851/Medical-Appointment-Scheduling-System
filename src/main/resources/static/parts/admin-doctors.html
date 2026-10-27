@@ -1,0 +1,33 @@
+<!-- VIEW 17: ADMIN - DOCTOR MANAGEMENT -->
+<section id="view-doctor-management" class="view-section d-none">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+        <h4 class="fw-bold"><i class="bi bi-heart-pulse-fill me-2 text-primary"></i>Doctor Management</h4>
+        <button class="btn btn-teal btn-sm" onclick="openNewDoctorModal()"><i class="bi bi-plus-circle me-1"></i>Add Doctor</button>
+    </div>
+
+    <div class="card p-2 mb-3 border-0 shadow-sm">
+        <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search doctors..." oninput="loadAdminDoctors(this.value)">
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Doctor ID</th>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                        <th>Class Type</th>
+                        <th>Fee</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-doctors-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+</section>

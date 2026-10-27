@@ -1,0 +1,57 @@
+<!-- VIEW 4: PATIENT DASHBOARD -->
+<section id="view-patient-dashboard" class="view-section d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <div>
+            <h3 class="fw-bold mb-1">Welcome, <span id="dash-patient-name">Patient</span></h3>
+            <span class="badge badge-vip" id="dash-patient-tier">VIP Gold Member</span>
+        </div>
+        <div class="d-flex gap-2 mt-2 mt-md-0">
+            <a href="#appointment-booking" class="btn btn-teal btn-sm"><i class="bi bi-calendar-plus me-1"></i>Book Appointment</a>
+            <a href="#patient-profile" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-gear me-1"></i>Profile</a>
+        </div>
+    </div>
+
+    <!-- Metric Cards -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card p-3 stat-card primary">
+                <div class="text-muted small fw-bold">UPCOMING APPOINTMENTS</div>
+                <h2 class="fw-bold mb-0 text-primary" id="dash-upcoming-count">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 stat-card success">
+                <div class="text-muted small fw-bold">PAST CONSULTATIONS</div>
+                <h2 class="fw-bold mb-0 text-success" id="dash-past-count">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 stat-card warning">
+                <div class="text-muted small fw-bold">PAYMENT RECORDS</div>
+                <h2 class="fw-bold mb-0 text-warning" id="dash-payments-count">0</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Appointments & Payments split -->
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Upcoming Consultations</h5>
+                    <a href="#appointment-list" class="btn btn-sm btn-link">View All</a>
+                </div>
+                <div id="dash-upcoming-list"></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Recent Receipts</h5>
+                    <a href="#payment-history" class="btn btn-sm btn-link">History</a>
+                </div>
+                <div id="dash-recent-payments"></div>
+            </div>
+        </div>
+    </div>
+</section>

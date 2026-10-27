@@ -1,0 +1,98 @@
+
+
+<!-- Main Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <i class="bi bi-hospital fs-3 me-2"></i>
+            <div>
+                <span class="fw-bold">CareSync</span>
+                <span class="small d-block text-white-50" style="font-size: 0.65rem; letter-spacing: 1px;">MEDICAL CENTER</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home"><i class="bi bi-house-door me-1"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#doctor-listing"><i class="bi bi-person-badge me-1"></i>Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#review-list"><i class="bi bi-star me-1"></i>Reviews</a>
+                </li>
+
+                <!-- Patient Specific Links -->
+                <li class="nav-item dropdown role-nav" data-roles="PATIENT">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle me-1"></i>Patient Portal
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#patient-dashboard"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#appointment-booking"><i class="bi bi-calendar-plus me-2"></i>Book Appointment</a></li>
+                        <li><a class="dropdown-item" href="#appointment-list"><i class="bi bi-calendar-check me-2"></i>My Appointments</a></li>
+                        <li><a class="dropdown-item" href="#payment-page"><i class="bi bi-credit-card me-2"></i>Make Payment</a></li>
+                        <li><a class="dropdown-item" href="#payment-history"><i class="bi bi-receipt me-2"></i>Payment History</a></li>
+                        <li><a class="dropdown-item" href="#review-submit"><i class="bi bi-chat-quote me-2"></i>Submit Review</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#patient-profile"><i class="bi bi-gear me-2"></i>My Profile</a></li>
+                    </ul>
+                </li>
+
+                <!-- Staff Specific Links (Separate from Admin!) -->
+                <li class="nav-item dropdown role-nav" data-roles="STAFF">
+                    <a class="nav-link dropdown-toggle text-info fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-workspace me-1"></i>Staff Portal
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#staff-dashboard"><i class="bi bi-clipboard2-pulse me-2"></i>Staff Dashboard</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#appointment-booking"><i class="bi bi-calendar-plus me-2"></i>Book Walk-In Patient</a></li>
+                        <li><a class="dropdown-item" href="#doctor-listing"><i class="bi bi-heart-pulse me-2"></i>Doctor Duty Status</a></li>
+                    </ul>
+                </li>
+
+                <!-- Admin Specific Links (Administrator Only!) -->
+                <li class="nav-item dropdown role-nav" data-roles="ADMIN">
+                    <a class="nav-link dropdown-toggle text-warning fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-shield-lock me-1"></i>Admin Panel
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#admin-dashboard"><i class="bi bi-graph-up me-2"></i>Admin Dashboard</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#patient-management"><i class="bi bi-people me-2"></i>Patients</a></li>
+                        <li><a class="dropdown-item" href="#doctor-management"><i class="bi bi-heart-pulse me-2"></i>Doctors</a></li>
+                        <li><a class="dropdown-item" href="#staff-management"><i class="bi bi-person-workspace me-2"></i>Staff Directory</a></li>
+                        <li><a class="dropdown-item" href="#appointment-management"><i class="bi bi-calendar3 me-2"></i>Appointments</a></li>
+                        <li><a class="dropdown-item" href="#payment-management"><i class="bi bi-wallet2 me-2"></i>Payments & Revenue</a></li>
+                        <li><a class="dropdown-item" href="#review-management"><i class="bi bi-chat-left-dots me-2"></i>Review Moderation</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right Side Account Nav -->
+            <div class="d-flex align-items-center">
+                <!-- Logged-in User Badge -->
+                <div class="d-flex align-items-center text-white me-3 role-nav" data-roles="PATIENT,ADMIN,STAFF">
+                    <i class="bi bi-person-circle me-1 text-info fs-5"></i>
+                    <span id="current-user-display" class="fw-semibold small me-2"></span>
+                    <span id="current-role-badge" class="badge"></span>
+                </div>
+
+                <a href="#login" class="btn btn-outline-light btn-sm me-2 role-nav" data-roles="GUEST">
+                    <i class="bi bi-box-arrow-in-right me-1"></i>Login
+                </a>
+                <a href="#register" class="btn btn-teal btn-sm me-2 role-nav" data-roles="GUEST">
+                    <i class="bi bi-person-plus me-1"></i>Register
+                </a>
+                <button class="btn btn-light btn-sm role-nav" data-roles="PATIENT,ADMIN,STAFF" onclick="quickSwitchRole('GUEST')">
+                    <i class="bi bi-box-arrow-right me-1"></i>Logout
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

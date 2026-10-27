@@ -1,0 +1,77 @@
+<!-- VIEW 8: APPOINTMENT BOOKING -->
+<section id="view-appointment-booking" class="view-section d-none">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-7">
+            <div class="card p-4 shadow-sm border-0">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold mb-0"><i class="bi bi-calendar2-plus-fill me-2 text-primary"></i>Book Doctor Appointment</h4>
+                    <span class="badge bg-info text-dark">Availability Validation</span>
+                </div>
+                <p class="text-muted small">Select your doctor and preferred slot. The system checks conflict rules before confirmation. Note: Past dates cannot be selected.</p>
+                
+                <form id="appointmentBookingForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Patient ID *</label>
+                            <input type="text" id="book-patient-id" class="form-control" value="PAT-101" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Appointment Type</label>
+                            <select id="book-type" class="form-select">
+                                <option value="Standard">Standard Consultation (20 mins)</option>
+                                <option value="Emergency">Emergency Consultation (45 mins)</option>
+                                <option value="FollowUp">Follow-Up Review (15 mins)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Select Doctor *</label>
+                        <select id="book-doctor-id" class="form-select" required>
+                            <option value="">-- Loading Doctors --</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Consultation Date *</label>
+                            <input type="date" id="book-date" class="form-control" required>
+                            <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Past dates are disabled. Select today or a future date.</small>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Consultation Time *</label>
+                            <select id="book-time" class="form-select" required>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="09:30">09:30 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="10:30">10:30 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="14:30">02:30 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="15:30">03:30 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="button" id="btn-check-availability" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-clock-history me-1"></i>Check Slot Availability
+                        </button>
+                        <div id="booking-availability-feedback" class="mt-2 small"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Reason for Visit / Symptoms *</label>
+                        <textarea id="book-reason" class="form-control" rows="3" placeholder="Describe symptoms or medical reason for consultation..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-teal w-100 py-2 fw-semibold">
+                        <i class="bi bi-check-circle me-1"></i>Confirm & Book Appointment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+# staffId|name|contactNumber|position|department|salary|additionalInfo
+STF-101|Nurse Mary Watson|0774433221|Nurse|Emergency Care|65000.00|Ward:Emergency ICU;Shift:Night
+STF-102|Sunil Wickramasinghe|0715566778|Receptionist|Patient Relations|45000.00|Desk:Desk 01;Languages:English, Sinhala, Tamil
+STF-103|Nurse Ruwani Jayasinghe|0782233445|Nurse|Pediatrics Ward|60000.00|Ward:Pediatrics Ward 3;Shift:Day
+STF-104|Dr. Samantha Perera|0712345678|Doctor|Cardiology|180000.00|Status:Available
+STF-105|Dr. David Fernando|0778765432|Doctor|General Medicine|150000.00|Status:Available

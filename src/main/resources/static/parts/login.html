@@ -1,0 +1,45 @@
+<!-- VIEW 3: PATIENT / USER LOGIN -->
+<section id="view-login" class="view-section d-none">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card p-4 shadow-sm border-0">
+                <div class="text-center mb-4">
+                    <div class="stat-icon bg-primary text-white mx-auto mb-2">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h3 class="fw-bold">System Login</h3>
+                    <p class="text-muted small">Select your role and authenticate</p>
+                </div>
+                <form id="patientLoginForm">
+                    <div class="mb-3">
+                        <label class="form-label">Role</label>
+                        <select id="login-role" class="form-select">
+                            <option value="PATIENT">Patient</option>
+                            <option value="STAFF">Medical Staff (Nurse / Receptionist)</option>
+                            <option value="ADMIN">System Administrator</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" id="login-username" class="form-control" value="john_doe" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" id="login-password" class="form-control" value="pass123" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                        <i class="bi bi-box-arrow-in-right me-1"></i>Authenticate & Enter
+                    </button>
+
+                    <div class="card bg-light mt-4 p-3 border-0 small">
+                        <strong>Demo Credentials (For Viva):</strong>
+                        <div class="text-muted mt-1">• Patient: <code>john_doe</code> / <code>pass123</code> (VIP)</div>
+                        <div class="text-muted">• Patient: <code>sarah_smith</code> / <code>pass123</code> (Regular)</div>
+                        <div class="text-muted">• Staff: <code>staff</code> / <code>staff123</code> (Nurse Mary Watson)</div>
+                        <div class="text-muted">• Admin: <code>admin</code> / <code>admin123</code> (Admin Panel)</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

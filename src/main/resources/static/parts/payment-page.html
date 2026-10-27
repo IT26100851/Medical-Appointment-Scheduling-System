@@ -1,0 +1,62 @@
+<!-- VIEW 11: PAYMENT PAGE -->
+<section id="view-payment-page" class="view-section d-none">
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+            <div class="card p-4 shadow-sm border-0">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold mb-0"><i class="bi bi-credit-card-fill me-2 text-primary"></i>Medical Fee Checkout</h4>
+                    <span class="badge bg-success">Simulated Gateway</span>
+                </div>
+                <p class="text-muted small">Choose your payment channel. Polymorphic handlers calculate fees and apply VIP discounts.</p>
+
+                <form id="paymentProcessingForm">
+                    <div class="mb-3">
+                        <label class="form-label">Select Appointment *</label>
+                        <select id="pay-appointment-id" class="form-select" required>
+                            <option value="">-- Choose Appointment --</option>
+                        </select>
+                    </div>
+
+                    <input type="hidden" id="pay-patient-id" value="PAT-101">
+
+                    <!-- Bill Calculation Summary -->
+                    <div class="card bg-light p-3 mb-3 border-0 small">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Base Consultation Fee:</span>
+                            <strong id="pay-base-fee">LKR 0.00</strong>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1 text-success">
+                            <span>VIP Discount (15%):</span>
+                            <strong id="pay-discount-amount">- LKR 0.00</strong>
+                        </div>
+                        <hr class="my-2">
+                        <div class="d-flex justify-content-between fs-6 fw-bold">
+                            <span>Total Payable:</span>
+                            <span class="text-primary" id="pay-total-amount">LKR 0.00</span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" id="pay-amount-input" value="0.0">
+
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method (OOP Subclass)</label>
+                        <select id="pay-method" class="form-select" onchange="togglePaymentInputs(this.value)">
+                            <option value="CARD">Credit/Debit Card (CardPayment - 1.5% fee)</option>
+                            <option value="ONLINE">Online Portal / Gateway (OnlinePayment - 2.0% fee)</option>
+                            <option value="CASH">Hospital Front Desk (CashPayment - 0% fee)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4" id="pay-detail-group">
+                        <label class="form-label" id="pay-detail-label">Card Number (Mock)</label>
+                        <input type="text" id="pay-detail-input" class="form-control" placeholder="4242 •••• •••• 4242" value="4532882199004242">
+                    </div>
+
+                    <button type="submit" class="btn btn-teal w-100 py-2 fw-semibold">
+                        <i class="bi bi-lock me-1"></i>Process Simulated Payment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

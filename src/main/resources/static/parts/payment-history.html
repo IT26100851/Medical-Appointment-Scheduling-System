@@ -1,0 +1,30 @@
+<!-- VIEW 12: PAYMENT HISTORY -->
+<section id="view-payment-history" class="view-section d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <div>
+            <h3 class="fw-bold mb-1"><i class="bi bi-receipt-cutoff me-2 text-primary"></i>Payment History</h3>
+        </div>
+        <a href="#payment-page" class="btn btn-teal btn-sm"><i class="bi bi-plus-circle me-1"></i>New Payment</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Appointment ID</th>
+                        <th>Amount</th>
+                        <th>Method</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Receipt</th>
+                    </tr>
+                </thead>
+                <tbody id="payment-history-tbody">
+                    <tr><td colspan="7" class="text-center py-4">Loading payments...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

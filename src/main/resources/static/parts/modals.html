@@ -1,0 +1,154 @@
+<!-- Reschedule Appointment Modal -->
+<div class="modal fade" id="rescheduleModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Reschedule Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="rescheduleForm">
+                <div class="modal-body">
+                    <input type="hidden" id="modal-reschedule-id">
+                    <div class="mb-3">
+                        <label class="form-label">New Consultation Date *</label>
+                        <input type="date" id="modal-reschedule-date" class="form-control" required>
+                        <small class="text-muted">Only today or future dates can be selected.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">New Time Slot *</label>
+                        <select id="modal-reschedule-time" class="form-select" required>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="09:30">09:30 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="10:30">10:30 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="14:30">02:30 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Reason for Reschedule</label>
+                        <textarea id="modal-reschedule-reason" class="form-control" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-teal">Save Rescheduled Slot</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Receipt Modal -->
+<div class="modal fade" id="receiptModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body" id="receipt-modal-content"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="window.print()">Print Receipt</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Admin Edit Patient Modal -->
+<div class="modal fade" id="adminEditPatientModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Edit Patient Record</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="adminEditPatientForm">
+                <div class="modal-body">
+                    <input type="hidden" id="admin-edit-patient-id">
+                    <div class="mb-2">
+                        <label class="form-label small">Full Name *</label>
+                        <input type="text" id="admin-edit-patient-name" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Email *</label>
+                        <input type="email" id="admin-edit-patient-email" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Phone *</label>
+                        <input type="text" id="admin-edit-patient-phone" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Address</label>
+                        <input type="text" id="admin-edit-patient-address" class="form-control form-control-sm">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Membership Tier</label>
+                        <select id="admin-edit-patient-type" class="form-select form-select-sm">
+                            <option value="Regular">Regular</option>
+                            <option value="VIP">VIP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Admin Edit/Add Doctor Modal -->
+<div class="modal fade" id="adminEditDoctorModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="admin-doc-modal-title">Edit Doctor Record</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="adminEditDoctorForm">
+                <div class="modal-body">
+                    <input type="hidden" id="admin-edit-doctor-id">
+                    <div class="mb-2">
+                        <label class="form-label small">Doctor Name *</label>
+                        <input type="text" id="admin-edit-doctor-name" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Specialization *</label>
+                        <input type="text" id="admin-edit-doctor-spec" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Contact *</label>
+                        <input type="text" id="admin-edit-doctor-contact" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-2">
+                            <label class="form-label small">Doctor Class</label>
+                            <select id="admin-edit-doctor-type" class="form-select form-select-sm">
+                                <option value="GeneralDoctor">GeneralDoctor</option>
+                                <option value="SpecialistDoctor">SpecialistDoctor</option>
+                                <option value="Surgeon">Surgeon</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-2">
+                            <label class="form-label small">Fee (LKR)</label>
+                            <input type="number" id="admin-edit-doctor-fee" class="form-control form-control-sm" required>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Availability Status</label>
+                        <select id="admin-edit-doctor-status" class="form-select form-select-sm">
+                            <option value="Available">Available</option>
+                            <option value="Busy">Busy</option>
+                            <option value="On Leave">On Leave</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-teal btn-sm">Save Doctor</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

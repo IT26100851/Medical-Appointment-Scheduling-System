@@ -1,0 +1,60 @@
+<!-- VIEW 18: ADMIN - STAFF MANAGEMENT CRUD -->
+<section id="view-staff-management" class="view-section d-none">
+    <div class="row">
+        <div class="col-lg-8">
+            <h4 class="fw-bold mb-3"><i class="bi bi-person-workspace me-2 text-primary"></i>Hospital Staff Management</h4>
+            <div class="card shadow-sm border-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Staff ID</th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Department</th>
+                                <th>Contact</th>
+                                <th>Salary</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-staff-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Staff Card -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="card p-3 shadow-sm border-0">
+                <h5 class="fw-bold mb-3">Add Staff Member</h5>
+                <form id="staffAddForm">
+                    <div class="mb-2">
+                        <label class="form-label small">Name *</label>
+                        <input type="text" id="staff-add-name" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Position (Subclass) *</label>
+                        <select id="staff-add-pos" class="form-select form-select-sm">
+                            <option value="Nurse">Nurse (ICU / Wards)</option>
+                            <option value="Receptionist">Receptionist (Front Desk)</option>
+                            <option value="Doctor">Doctor (Clinical Staff)</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Department *</label>
+                        <input type="text" id="staff-add-dept" class="form-control form-control-sm" value="Emergency Care" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label small">Contact *</label>
+                        <input type="text" id="staff-add-contact" class="form-control form-control-sm" value="0770001122" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small">Base Salary (LKR) *</label>
+                        <input type="number" id="staff-add-salary" class="form-control form-control-sm" value="55000" required>
+                    </div>
+                    <button type="submit" class="btn btn-teal btn-sm w-100 fw-semibold">Add Staff</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
